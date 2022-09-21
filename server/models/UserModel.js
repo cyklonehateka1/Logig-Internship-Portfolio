@@ -13,8 +13,12 @@ const UserSchema = mongoose.Schema(
     },
     email: {
       type: String,
-      required: true,
+      // required: true,
       unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
     },
     github: {
       type: String,
@@ -22,7 +26,7 @@ const UserSchema = mongoose.Schema(
       unique: true,
     },
     portfolio: {
-      type: [mongoose.Schema.Types.ObjectId],
+      type: [String],
     },
     linkedin: {
       type: String,
