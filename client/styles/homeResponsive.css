@@ -153,6 +153,10 @@
         line-height: 30px;
     }
 
+    .hero-text-container h1 span {
+        font-size: 30px;
+    }
+
     .hero-text-container h4 {
         font-size: 15px;
         font-weight: 500;
@@ -210,6 +214,10 @@
         line-height: 30px;
     }
 
+    .hero-text-container h1 span {
+        font-size: 37px;
+    }
+
     .hero-text-container h4 {
         font-size: 18px;
         font-weight: 500;
@@ -236,7 +244,7 @@
 
     .hero-section .right {
         width: 100%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .hero-section .right img {
@@ -252,6 +260,10 @@
     .hero-text-container h1 {
         font-size: 28px;
         line-height: 35px;
+    }
+
+    .hero-text-container h1 span {
+        font-size: 32px;
     }
 
     .hero-text-container h4 {
@@ -281,5 +293,93 @@
 
     .hero-button-container button span {
         font-size: 16px;
+    }
+}
+
+/*  About Section */
+@media only screen and (min-device-width: 100px) and (max-device-width: 480px) {
+    .about-section .about-container {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+    }
+
+    .about-section .about-container .about-left {
+        width: 100%;
+    }
+
+    .about-section .about-container .about-right {
+        width: 100%;
+    }
+
+    .about-section .about-right h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .about-right .sub-sec h3 {
+        font-size: 17px;
+    }
+
+    .about-right .sub-sec h3 span {
+        font-size: 20px;
+    }
+
+    .about-right .sub-sec p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 720px) {
+    .about-section .about-container {
+        flex-direction: column-reverse;
+        margin-top: 60px;
+    }
+
+    .about-section .about-container .about-left {
+        width: 100%;
+    }
+
+    .about-section .about-container .about-right {
+        width: 100%;
+    }
+
+    .about-section .about-right h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .about-right .sub-sec h3 {
+        font-size: 20px;
+    }
+
+    .about-right .sub-sec h3 span {
+        font-size: 25px;
+    }
+
+    .about-right .sub-sec p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (min-device-width: 721px) and (max-device-width: 1023px) {
+    .about-section .about-container {
+        align-items: center;
+    }
+
+    .about-section .about-right h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .about-right .sub-sec h3 {
+        font-size: 15px;
+    }
+
+    .about-right .sub-sec h3 span {
+        font-size: 20px;
+    }
+
+    .about-right .sub-sec p {
+        font-size: 14px;
     }
 }
