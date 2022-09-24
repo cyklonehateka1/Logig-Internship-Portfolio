@@ -129,18 +129,18 @@
 @media only screen and (min-device-width: 100px) and (max-device-width: 480px) {
     .hero-section {
         flex-direction: column;
-        height: 100vh;
+        height: 105vh;
     }
 
     .hero-section .left {
         width: 100%;
-        padding: 20px 10px;
+        padding: 10px 10px;
     }
 
     .hero-text-container {
         width: 100%;
         padding-top: 30px;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 
     .hero-text-container span {
@@ -160,6 +160,7 @@
     .hero-text-container h4 {
         font-size: 15px;
         font-weight: 500;
+        margin-bottom: 0;
     }
 
     .hero-text-container p {
@@ -173,7 +174,7 @@
 
     .hero-button-link {
         width: 40%;
-
+        margin-top: 20px;
     }
 
     .hero-button-container button {
@@ -381,5 +382,582 @@
 
     .about-right .sub-sec p {
         font-size: 14px;
+    }
+}
+
+/* Skills And Testimonials Section */
+@media only screen and (min-device-width: 200px) and (max-device-width: 327px) {
+    .skills-testimonials-section {
+        height: auto;
+    }
+
+    .skills-test-container {
+        flex-direction: column;
+    }
+
+    .skills-test-container>.skills {
+        width: 100%;
+        /* border: 1px solid red; */
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0
+    }
+
+    .skills-test-container>.skills h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-cont {
+        grid-template-columns: repeat(2, 37%);
+        grid-template-rows: repeat(3, 30%)
+    }
+
+    .skill span {
+        font-size: 35px;
+    }
+
+    .test-skills-img {
+        width: 100%;
+        height: 33%;
+        /* border: 1px solid yellowgreen; */
+    }
+
+    .skills-test-container>.testimonials {
+        width: 100%;
+        height: 10%;
+        /* border: 1px solid black; */
+        padding-top: 30px;
+    }
+
+    .testimonials>h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .testimonials .test-cont {
+        height: 300px;
+        /* border: 1px solid red; */
+        padding: 0px 5px
+    }
+
+    .testimonial>.person-info img {
+        width: 40%;
+    }
+
+    .testimonial>.person-info>.details {
+        margin: 0 5px;
+    }
+
+    .person-info>.details>.name {
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+
+    .person-info>.details>.position {
+        font-size: 13px;
+    }
+
+    .testimonial>p {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 328px) and (max-device-width: 400px) {
+    .skills-testimonials-section {
+        height: auto;
+    }
+
+    .skills-test-container {
+        flex-direction: column;
+    }
+
+    .skills-test-container>.skills {
+        width: 100%;
+        /* border: 1px solid red; */
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0
+    }
+
+    .skills-test-container>.skills h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-cont {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, 30%)
+    }
+
+    .skill span {
+        font-size: 35px;
+    }
+
+    .test-skills-img {
+        width: 100%;
+        height: 33%;
+        /* border: 1px solid yellowgreen; */
+    }
+
+    .skills-test-container .testimonials {
+        width: 100%;
+        height: 10%;
+        /* border: 1px solid black; */
+        padding-top: 30px;
+    }
+
+    .testimonials>h2 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+
+    .testimonials .test-cont {
+        padding: 0px 0px;
+        height: 350px;
+        /* border: 1px solid red; */
+    }
+
+    .testimonial>.person-info img {
+        width: 30%;
+        margin-right: 10px;
+    }
+
+    .testimonial>.person-info>.details {
+        margin: 0 5px;
+    }
+
+    .person-info>.details>.name {
+        font-size: 17px;
+        letter-spacing: 0;
+    }
+
+    .person-info>.details>.position {
+        font-size: 15px;
+    }
+
+    .testimonial>p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-device-width: 401px) and (max-device-width: 600px) {
+    .skills-testimonials-section {
+        height: auto;
+    }
+
+    .skills-test-container {
+        flex-direction: column;
+    }
+
+    .skills-test-container>.skills {
+        width: 100%;
+        /* border: 1px solid red; */
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0
+    }
+
+    .skills-test-container>.skills h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-cont {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, 30%);
+        /* border: 1px solid red; */
+        width: 75%;
+    }
+
+    .skill span {
+        font-size: 35px;
+    }
+
+    .test-skills-img {
+        width: 100%;
+        height: 33%;
+        /* border: 1px solid yellowgreen; */
+    }
+
+    .skills-test-container .testimonials {
+        width: 100%;
+        height: 10%;
+        /* border: 1px solid black; */
+        padding-top: 30px;
+    }
+
+    .testimonials>h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .testimonials .test-cont {
+        padding: 0px 0px;
+        height: 350px;
+        /* border: 1px solid red; */
+    }
+
+    .testimonial>.person-info img {
+        width: 25%;
+        margin-right: 10px;
+        border-radius: 90px;
+        /* border: 1px solid red; */
+    }
+
+    .testimonial>.person-info>.details {
+        margin: 0 5px;
+    }
+
+    .person-info>.details>.name {
+        font-size: 25px;
+        letter-spacing: 0;
+    }
+
+    .person-info>.details>.position {
+        font-size: 20px;
+    }
+
+    .testimonial>p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-device-width: 601px) and (max-device-width: 1090px) {
+    .skills-testimonials-section {
+        height: auto;
+        padding: 5% 2%;
+    }
+
+    .skills-test-container {}
+
+    .skills-test-container>.skills {
+        width: 48%;
+        /* border: 1px solid red; */
+        height: 420px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0
+    }
+
+    .skills-test-container>.skills h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-cont {
+        grid-template-columns: repeat(2, 47%);
+        grid-template-rows: repeat(3, 33%);
+        /* border: 1px solid red; */
+        width: 100%;
+    }
+
+    .skill span {
+        font-size: 25px;
+    }
+
+    .skill>#html,
+    #css,
+    #javascript,
+    .nodejs,
+    .git,
+    .linkedin {
+        width: 35px;
+        height: 35px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+    }
+
+    .test-skills-img {
+        display: none;
+    }
+
+    .skills-test-container .testimonials {
+        width: 48%;
+        /* border: 1px solid black; */
+        padding-top: 30px;
+    }
+
+    .testimonials>h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .testimonials .test-cont {
+        padding: 0px 0px;
+        height: 310px;
+        /* border: 1px solid red; */
+    }
+
+    .testimonial>.person-info img {
+        width: 25%;
+        margin-right: 10px;
+        border-radius: 90px;
+        /* border: 1px solid red; */
+    }
+
+    .testimonial>.person-info>.details {
+        margin: 0 5px;
+    }
+
+    .person-info>.details>.name {
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+
+    .person-info>.details>.position {
+        font-size: 17px;
+    }
+
+    .testimonial>p {
+        font-size: 13px;
+    }
+}
+
+/* Gallery Section */
+
+
+/* Footer Section */
+@media only screen and (min-device-width: 100px) and (max-device-width: 480px) {
+    .footer-section {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .footer-left {
+        width: 100%;
+    }
+
+    .footer-left>a>h2 {
+        font-size: 27px;
+    }
+
+    .footer-left>h4 {
+        font-size: 13px;
+    }
+
+    .footer-center {
+        width: 100%;
+        text-align: right;
+        /* border: 1px solid red; */
+        padding-top: 30px;
+    }
+
+    .footer-center>.footer-menu {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+    }
+
+    .footer-center>.footer-menu>a {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* border: 1px solid yellow; */
+        text-align: center;
+    }
+
+    .footer-center>a {
+        text-align: right;
+        padding: 0 0;
+        font-size: 16px;
+    }
+
+    .footer-right {
+        width: 100%;
+        grid-column: span 2;
+        margin-top: 70px;
+    }
+
+    .footer-right>h5 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .footer-right>form>input {
+        width: 85%;
+        height: 50px;
+    }
+
+    .footer-right>form>textarea {
+        width: 85%;
+        height: 120px;
+    }
+
+    .footer-right>form>.btn-container {
+        width: 85%;
+        height: 60px;
+    }
+
+    .btn-container>.footer-form-btn {
+        height: 50px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 720px) {
+    .footer-section {
+        height: auto;
+        padding: 20px 24px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .footer-left {
+        width: 100%;
+    }
+
+    .footer-left>a>h2 {
+        font-size: 35px;
+    }
+
+    .footer-left>h4 {
+        font-size: 13px;
+    }
+
+    .footer-center {
+        width: 100%;
+        text-align: right;
+        /* border: 1px solid red; */
+        padding-top: 30px;
+    }
+
+    .footer-center>.footer-menu {
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        border: 1px solid red;
+        justify-content: flex-end;
+    }
+
+    .footer-center>.footer-menu>a {
+        font-size: 19px;
+        margin: 5px 3px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* border: 1px solid yellow; */
+        text-align: center;
+    }
+
+    .footer-center>a {
+        text-align: right;
+        padding: 0 0;
+        font-size: 19px;
+    }
+
+    .footer-right {
+        width: 100%;
+        grid-column: span 2;
+        margin-top: 70px;
+    }
+
+    .footer-right>h5 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .footer-right>form>input {
+        width: 85%;
+        height: 50px;
+    }
+
+    .footer-right>form>textarea {
+        width: 85%;
+        height: 120px;
+    }
+
+    .footer-right>form>.btn-container {
+        width: 85%;
+        height: 60px;
+    }
+
+    .btn-container>.footer-form-btn {
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-device-width: 721px) and (max-device-width: 1023px) {
+    .footer-section {
+        height: auto;
+        padding: 20px 24px;
+    }
+
+    .footer-main {
+        /* border: 1px solid black; */
+        align-items: flex-start;
+    }
+
+    .footer-left {
+        /* border: 1px solid red; */
+        height: 100%;
+    }
+
+    .footer-left>a>h2 {
+        font-size: 35px;
+    }
+
+    .footer-center>.footer-menu>a {
+        font-size: 17px;
+    }
+
+    .footer-center>a {
+        font-size: 17px;
+    }
+
+    .footer-right>h5 {
+        font-size: 20px;
+    }
+
+    .footer-right>form {
+        /* border: 1px solid red; */
+    }
+
+    .footer-right>form>input {
+        height: 30px;
+    }
+
+    .footer-right>form>textarea {
+        height: 70px;
+    }
+
+    .btn-container>.footer-form-btn {
+        height: 40px;
+    }
+
+    .footer-copyright {
+        font-size: 16px;
     }
 }
