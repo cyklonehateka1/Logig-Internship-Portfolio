@@ -140,7 +140,7 @@
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,22 +196,14 @@
 
 
 .info-cont>.row1>.row1-left {
-    width: 49.5%;
+    width: 39.5%;
     padding: 30px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    border: 1px solid red;
+    border: 2px solid rgb(109, 109, 109);
     background-color: white;
-}
-
-.info-cont>.row1>.row1-right {
-    width: 49.5%;
-    padding: 30px 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .info-cont>.row1>.row1-left>h3 {
@@ -221,8 +213,173 @@
     margin-bottom: 10px;
 }
 
-.info-cont>.row1>.row1-left>p {}
+.info-cont>.row1>.row1-left>p {
+    line-height: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #4e4e4e;
+}
 
+.info-cont>.row1>.row1-right {
+    width: 59.5%;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    background-color: #1B1464;
+    border-radius: 5px;
+}
+
+.info-cont>.row1>.row1-right>h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.skills-container {
+    width: 100%;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px auto;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    padding-bottom: 10px;
+}
+
+.skill-img-container {
+    margin-right: 30px;
+    width: 15%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-img-container>img {
+    width: 30px;
+}
+
+.skills-row>h6 {
+    font-size: 22px;
+    color: rgb(212, 212, 212);
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+
+
+.info-cont>.row2 {
+    display: flex;
+    /* border: 1px solid yellow; */
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.info-cont>.row2>.row2-left {
+    width: 59.5%;
+    /* border: 1px solid royalblue; */
+    border-radius: 5px;
+    padding: 30px 20px;
+    color: white;
+    background-color: #ED7D2B;
+}
+
+.info-cont>.row2>.row2-left>h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.info-cont>.row2>.row2-left>p {
+    font-size: 16px;
+    color: rgb(230, 230, 230);
+    line-height: 20px;
+    font-weight: 400px;
+}
+
+.info-cont>.row2>.row2-right {
+    width: 39.5%;
+    border: 2px solid rgb(109, 109, 109);
+    border-radius: 5px;
+    padding: 30px 20px;
+    background-color: white;
+}
+
+.info-cont>.row2>.row2-right>h3 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #1B1464;
+}
+
+.row2-right>.contact-row {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.row2-right>.contact-row>i {
+    margin-right: 20px;
+    /* border: 1px solid red; */
+    font-size: 25px;
+}
+
+.row2-right>.contact-row>span {
+    margin-right: 20px;
+}
+
+.row2-right>.contact-row>p {
+    font-size: 20px;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+.portfolio-cont {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 32.8%);
+    justify-content: center;
+    gap: 0.8%;
+
+}
+
+.portfolio-card {
+    border: 2px solid rgb(109, 109, 109);
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+.portfolio-card>img {
+    width: 100%;
+}
+
+.portfolio-card-det {
+    margin-top: 20px;
+    padding: 0 10px 10px 10px;
+}
+
+.portfolio-card-det>h5 {
+    font-size: 20px;
+    color: #4e4e4e;
+}
+
+.portfolio-card-det>button {
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1B1464;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
 
 
 /* Footer Section */
@@ -289,7 +446,7 @@
     font-size: 25px;
     display: flex;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
@@ -348,7 +505,7 @@
 }
 
 .footer-right {
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     width: 40%;
     display: flex;
     justify-content: flex-start;
@@ -402,7 +559,6 @@
 .btn-container>.footer-form-btn {
     width: 40%;
     height: 40px;
-    border: 1px solid rgb(190, 190, 190);
     border-radius: 5px;
     background-color: #1B1464;
     color: white;

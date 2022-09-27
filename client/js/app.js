@@ -41,4 +41,50 @@
   };
 
   arrowUp.addEventListener("click", testimonialSlideUp);
+
+  // Animation
+
+  // Hero Section Animation
+  const animationObserverFirst = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      let entry = entries[0];
+      if (entry.isIntersecting) {
+        document.querySelector("#hero-left").classList.add("fadein-left");
+        document.querySelector("#hero-right").classList.add("fadein-right");
+      }
+    }
+  });
+
+  animationObserverFirst.observe(document.querySelector(".hero-section"));
+
+  // About Section Animation
+  const animationObserverSecond = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      let entry = entries[0];
+      if (entry.isIntersecting) {
+        document.querySelector(".about-left").classList.add("fadein-top");
+        document.querySelector(".about-right").classList.add("fadein-bottom");
+      }
+    }
+  });
+
+  animationObserverSecond.observe(document.querySelector(".about-container"));
+
+  // Skills and Testimonials Section Animation
+  const animationObserverThird = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      let entry = entries[0];
+      if (entry.isIntersecting) {
+        document.querySelector("#skills").classList.add("fadein-top");
+        document
+          .querySelector(".test-skills-img")
+          .classList.add("fadein-bottom");
+        document.querySelector(".testimonials").classList.add("fadein-top");
+      }
+    }
+  });
+
+  animationObserverThird.observe(
+    document.querySelector(".skills-test-container")
+  );
 })();
