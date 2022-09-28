@@ -5,7 +5,6 @@
 
   const mobileMenuToggler = () => {
     mobileMenu.style.transform = "translateX(0)";
-    console.log("hell");
     closeMobileMenu.addEventListener("click", () => {
       mobileMenu.style.transform = "translateX(100%)";
     });
@@ -44,19 +43,6 @@
 
   // Animation
 
-  // Hero Section Animation
-  const animationObserverFirst = new IntersectionObserver((entries) => {
-    for (let i = 0; i < entries.length; i++) {
-      let entry = entries[0];
-      if (entry.isIntersecting) {
-        document.querySelector("#hero-left").classList.add("fadein-left");
-        document.querySelector("#hero-right").classList.add("fadein-right");
-      }
-    }
-  });
-
-  animationObserverFirst.observe(document.querySelector(".hero-section"));
-
   // About Section Animation
   const animationObserverSecond = new IntersectionObserver((entries) => {
     for (let i = 0; i < entries.length; i++) {
@@ -71,7 +57,7 @@
   animationObserverSecond.observe(document.querySelector(".about-container"));
 
   // Skills and Testimonials Section Animation
-  const animationObserverThird = new IntersectionObserver((entries) => {
+  const skillsAndTestimonyAnim = new IntersectionObserver((entries) => {
     for (let i = 0; i < entries.length; i++) {
       let entry = entries[0];
       if (entry.isIntersecting) {
@@ -84,7 +70,82 @@
     }
   });
 
-  animationObserverThird.observe(
+  skillsAndTestimonyAnim.observe(
     document.querySelector(".skills-test-container")
   );
+
+  const galleryRowOneAnim = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      let entry = entries[0];
+      if (entry.isIntersecting) {
+        document.querySelector(".gallery-row-1").classList.add("fadein-left");
+      }
+    }
+  });
+
+  galleryRowOneAnim.observe(document.querySelector(".images-container"));
+
+  const galleryRowTwoAnim = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      let entry = entries[0];
+      if (entry.isIntersecting) {
+        document.querySelector(".gallery-row-2").classList.add("fadein-right");
+      }
+    }
+  });
+
+  galleryRowTwoAnim.observe(document.querySelector(".gallery-row-2"));
+
+  const galleryRowThreeAnim = new IntersectionObserver((entries) => {
+    for (let i = 0; i < entries.length; i++) {
+      let entry = entries[0];
+      if (entry.isIntersecting) {
+        document.querySelector(".gallery-row-3").classList.add("fadein-left");
+      }
+    }
+  });
+
+  galleryRowThreeAnim.observe(document.querySelector(".gallery-row-3"));
+
+  // GALLERY IMMAGE VIEWER
+
+  const imageModal = document.querySelector(".image-viewer-modal");
+
+  const imageViewer = () => {
+    const galleryImage = document.querySelectorAll(".gallery-image");
+    let activeImage = document.querySelector("#active-img");
+    // console.log(activeImage);
+
+    const leftArrow = document.querySelector("#leftArrow");
+    const rightArrow = document.querySelector("#rightArrow");
+
+    const toggleActiveImage = (e) => {
+      const imageSrc = e.srcElement.getAttribute("src");
+      activeImage.src = imageSrc;
+      imageModal.style.display = "flex";
+
+      imageModal.addEventListener("click", (e) => {
+        if (e.target.closest(".active-image-box")) return;
+        imageModal.style.display = "none";
+      });
+    };
+
+    const nextImage = (e) => {
+      console.log(e);
+    };
+
+    for (let i = 0; i < galleryImage.length; i++) {
+      const image = galleryImage[i];
+      // console.log(image);
+
+      image.addEventListener("click", toggleActiveImage);
+      rightArrow.addEventListener("click", nextImage);
+    }
+  };
+
+  imageViewer();
+
+  // for (let i = 0; i < image.length; i++) {
+  //   console.log
+  // }
 })();

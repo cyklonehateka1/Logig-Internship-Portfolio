@@ -1,12 +1,16 @@
 import mongoose from "mongoose";
 
 const InternSchema = mongoose.Schema({
+  img: {
+    type: String,
+    unique: true,
+  },
   name: {
     type: String,
     required: true,
   },
   email: {
-    type: email,
+    type: String,
     required: true,
     unique: true,
   },

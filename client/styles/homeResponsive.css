@@ -1,3 +1,67 @@
+/* ANIMATION RESPONSIVE */
+
+@media only screen and (min-device-width: 100px) and (max-device-width: 720px) {
+
+
+    .fadein-top {
+        -webkit-animation: fadeInBottom 2s both;
+        -moz-animation: fadeInBottom 2s both;
+        -o-animation: fadeInBottom 2s both;
+        animation: fadeInBottom 2s both;
+    }
+
+    @-webkit-keyframes fadeInBottom {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(100px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+        }
+    }
+
+    @-moz-keyframes fadeInBottom {
+        0% {
+            opacity: 0;
+            -moz-transform: translateY(100px);
+        }
+
+        100% {
+            opacity: 1;
+            -moz-transform: translateY(0);
+        }
+    }
+
+    @-o-keyframes fadeInBottom {
+        0% {
+            opacity: 0;
+            -o-transform: translateY(100px);
+        }
+
+        100% {
+            opacity: 1;
+            -o-transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* ANIMATION ENDS */
+
+
 /* Header */
 @media only screen and (min-device-width: 100px) and (max-device-width: 480px) {
 

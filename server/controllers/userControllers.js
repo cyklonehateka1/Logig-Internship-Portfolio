@@ -33,16 +33,17 @@ export const signup = async (req, res, next) => {
 
 export const signin = async (req, res, next) => {
   try {
-    const { password, email } = req.body;
-
-    if (!password || !email)
+    if (!req.body.password || !req.body.email)
       return next(errorHandler(400, "All fields are required"));
 
-    const user = await UserModel.findOne({ email });
+    const user = await UserModel.findOne({ email: req.body.email });
 
     if (!user) return next(errorHandler(400, "User not found"));
 
-    const decodedPassword = await bcrypt.compare(password, user.password);
+    const decodedPassword = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
 
     if (!decodedPassword) return next(errorHandler(400, "Incorrect password"));
 
@@ -55,7 +56,9 @@ export const signin = async (req, res, next) => {
       process.env.JWT_SEC
     );
 
-    res.cookie("token", token, { httpOnly: true }).status(200).json(user);
+    const { password, ...others } = user._doc;
+
+    res.cookie("token", token, { httpOnly: true }).status(200).json(others);
   } catch (err) {
     return next(err);
   }

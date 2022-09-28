@@ -2,7 +2,9 @@ import express, { json } from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";
+import internRoutes from "./routes/internRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -18,8 +20,10 @@ const connect = async () => {
 
 app.use(cors());
 app.use(json());
+app.use(cookieParser());
 
 app.use("/api/users", userRoutes);
+app.use("/api/interns", internRoutes);
 
 app.use((err, req, res, next) => {
   const errStatus = err.status || 500;
