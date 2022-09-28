@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.post("/new", verifyToken, createIntern);
 router.get("/all", getAllInterns);
-router.put("/update/:id", updateIntern);
+router.put("/update/:id", verifyToken, updateIntern);
 router.get("/:id", getIntern);
 
 export default router;

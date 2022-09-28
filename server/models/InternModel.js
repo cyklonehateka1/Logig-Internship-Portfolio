@@ -25,6 +25,9 @@ const InternSchema = mongoose.Schema({
           type: String,
           unique: true,
         },
+        img: {
+          type: String,
+        },
       },
     ],
   },
