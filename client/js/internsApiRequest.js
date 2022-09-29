@@ -4,8 +4,9 @@
     let internsContainer = document.querySelector(".interns-container");
     internsContainer.innerHTML = "";
 
-    data.forEach((intern) => {
-      dataHtml += `
+    data
+      ? data.forEach((intern) => {
+          dataHtml += `
         <div class="intern">
             <div class="intern-top">
               <img src="${intern.img}" alt="" />
@@ -14,16 +15,17 @@
               <h4>${intern.name}</h4>
               <p>${intern.email}</p>
               <div class="intern-socials">
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href="${intern.linkedin}"><i class="fab fa-linkedin-in"></i></a>
+                <a href="${intern.twitter}"><i class="fab fa-twitter"></i></a>
+                <a href="${intern.instagram}"><i class="fab fa-instagram"></i></a>
               </div>
               <button class="internButton" data-id="${intern._id}">view profile</button>
             </div>
           </div>
       `;
-      // console.log(intern._id);
-    });
+          // console.log(intern._id);
+        })
+      : (dataHtml += `<h1 style= "color: #1B1464;"><span style= "color: #ED7D2B;">Oops...</span> No Data found</h1>`);
 
     internsContainer.innerHTML = dataHtml;
 
@@ -39,7 +41,11 @@
   };
 
   const getApiData = async (searchValue) => {
-    fetch(`https://logi-internship-api.onrender.com/api/interns/all`)
+    fetch(
+      searchValue
+        ? `https://logi-internship-api.onrender.com/api/interns/all?search=${searchValue}`
+        : `https://logi-internship-api.onrender.com/api/interns/all?limit=9`
+    )
       .then((res) => res.json())
       .then((data) => {
         populateData(data);
@@ -48,5 +54,16 @@
         console.log(err);
       });
   };
+
+  const getBySearch = (e) => {
+    setTimeout(() => {
+      getApiData(e.target.value);
+    }, 1000);
+  };
+
+  const userSearch = document.getElementById("search");
+
+  userSearch.addEventListener("keyup", getBySearch);
+
   getApiData();
 })();

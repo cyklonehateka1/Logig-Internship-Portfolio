@@ -214,10 +214,11 @@
 }
 
 .info-cont>.row1>.row1-left>p {
-    line-height: 20px;
+    line-height: 22px;
     font-size: 17px;
     font-weight: 400;
     color: #4e4e4e;
+    word-spacing: 2px;
 }
 
 .info-cont>.row1>.row1-right {

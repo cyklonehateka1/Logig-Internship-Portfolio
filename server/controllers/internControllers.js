@@ -100,17 +100,6 @@ export const getAllInterns = async (req, res, next) => {
   }
 };
 
-// const getInternByQuery = async (req, res, next) => {
-//   const queryByNumber = req.query.new;
-//   const queryBySearch = req.query.new;
-
-//   try {
-//     if (queryByNumber) {
-//       let interns = await ProductModel.find().sort({ createdAt: -1 }).limit(5);
-//     }
-//   } catch (error) {}
-// };
-
 export const getIntern = async (req, res, next) => {
   const intern = await InternModel.findById(req.params.id);
   res.status(200).json(intern);

@@ -344,8 +344,8 @@
     max-width: 100vw;
     display: flex;
     background-image: linear-gradient(to top, #bfdbfef3,
-            rgba(255, 255, 255, 0.979)),
-        url(../assets/img/background-g088a079f6_1280.png);
+            rgba(255, 255, 255, 0.884)),
+        url(../assets/img/hero-background.png);
     padding: 10% auto;
     justify-content: center;
     align-items: center;

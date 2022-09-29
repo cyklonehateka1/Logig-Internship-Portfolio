@@ -72,7 +72,7 @@
                 <img src="${project.img}" alt="" />
                 <div class="portfolio-card-det">
                   <h5>${project.name}</h5>
-                  <a src="${project.link}"></a>
+                  <a src="${project.link}"><button>Live Demo</button></a>
                 </div>
               </div>`;
           })}
