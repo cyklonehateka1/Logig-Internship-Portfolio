@@ -1,17 +1,4 @@
 (() => {
-  const mobileMenu = document.querySelector(".menu-container");
-  const closeMobileMenu = document.querySelector("#close-mobile");
-  const hamburgerMenu = document.querySelector("#hamburger-menu");
-
-  const mobileMenuToggler = () => {
-    mobileMenu.style.transform = "translateX(0)";
-    closeMobileMenu.addEventListener("click", () => {
-      mobileMenu.style.transform = "translateX(100%)";
-    });
-  };
-
-  hamburgerMenu.addEventListener("click", mobileMenuToggler);
-
   // Testimonials Slider
   const slide = document.getElementById("slide");
   const arrowUp = document.getElementById("arrowUp");
@@ -29,7 +16,6 @@
     }
   };
 
-  console.log(counter);
   arrowDown.addEventListener("click", testimonialSlideDown);
 
   const testimonialSlideUp = () => {
@@ -114,10 +100,6 @@
   const imageViewer = () => {
     const galleryImage = document.querySelectorAll(".gallery-image");
     let activeImage = document.querySelector("#active-img");
-    // console.log(activeImage);
-
-    const leftArrow = document.querySelector("#leftArrow");
-    const rightArrow = document.querySelector("#rightArrow");
 
     const toggleActiveImage = (e) => {
       const imageSrc = e.srcElement.getAttribute("src");
@@ -136,16 +118,10 @@
 
     for (let i = 0; i < galleryImage.length; i++) {
       const image = galleryImage[i];
-      // console.log(image);
 
       image.addEventListener("click", toggleActiveImage);
-      rightArrow.addEventListener("click", nextImage);
     }
   };
 
   imageViewer();
-
-  // for (let i = 0; i < image.length; i++) {
-  //   console.log
-  // }
 })();

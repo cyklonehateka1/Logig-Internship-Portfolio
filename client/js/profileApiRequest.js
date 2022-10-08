@@ -1,6 +1,8 @@
 (() => {
   const populateData = (data) => {
     const profileContainer = document.querySelector(".profile-container");
+    const title = document.querySelector("title");
+    title.innerText = data.name;
 
     data
       ? (profileContainer.innerHTML = `<div class="profile-top">
@@ -27,7 +29,7 @@
                 ${data.skills.map((skill) => {
                   return `<div class="skills-row">
                       <div class="skill-img-container">
-                        <img src=${skill.img} alt="" class="html" />
+                        <img src=${skill.image} alt="" class="html" />
                       </div>
                       <h6>${skill.name}</h6>
                     </div>`;
@@ -71,7 +73,7 @@
             return `<div class="portfolio-card">
                 <img src="${project.img}" alt="" />
                 <div class="portfolio-card-det">
-                  <h5>${project.name}</h5>
+                  <h5 class="darkPrimaryText">${project.name}</h5>
                   <a src="${project.link}"><button>Live Demo</button></a>
                 </div>
               </div>`;
@@ -84,15 +86,17 @@
   };
 
   const id = JSON.parse(localStorage.getItem("internId"));
-  console.log(id);
 
-  const getIntern = (internId) => {
-    fetch(`https://logi-internship-api.onrender.com/api/interns/${id}`)
-      .then((res) => res.json())
-      .then((data) => populateData(data))
-      .catch((err) => {
-        console.log(err);
-      });
+  const getIntern = async (internId) => {
+    try {
+      const res = await fetch(
+        `https://logi-internship-api.onrender.com/api/interns/${id}`
+      );
+      const data = await res.json();
+      populateData(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
   getIntern();
 })();

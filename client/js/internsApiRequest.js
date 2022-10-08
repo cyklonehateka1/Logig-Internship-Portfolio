@@ -4,7 +4,7 @@
     let internsContainer = document.querySelector(".interns-container");
     internsContainer.innerHTML = "";
 
-    data
+    data.length > 0
       ? data.forEach((intern) => {
           dataHtml += `
         <div class="intern">
@@ -23,7 +23,6 @@
             </div>
           </div>
       `;
-          // console.log(intern._id);
         })
       : (dataHtml += `<h1 style= "color: #1B1464;"><span style= "color: #ED7D2B;">Oops...</span> No Data found</h1>`);
 
@@ -41,18 +40,16 @@
   };
 
   const getApiData = async (searchValue) => {
-    fetch(
-      searchValue
-        ? `https://logi-internship-api.onrender.com/api/interns/all?search=${searchValue}`
-        : `https://logi-internship-api.onrender.com/api/interns/all?limit=9`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        populateData(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    try {
+      const res = await fetch(
+        searchValue
+          ? `https://logi-internship-api.onrender.com/api/interns/all?search=${searchValue}`
+          : `https://logi-internship-api.onrender.com/api/interns/all?limit=9`
+      );
+      populateData(await res.json());
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const getBySearch = (e) => {
